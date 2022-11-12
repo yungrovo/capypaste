@@ -238,6 +238,9 @@ footer{
   margin-top:10px;
 }
 
+.myButton:active{
+  background-color: lightseagreen;
+}
 
 canvas{
   margin-left: auto;
