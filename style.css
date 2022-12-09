@@ -6,17 +6,14 @@
 body {
   font-family: 'Assistant', sans-serif;
   font-size: 100%;
-  background: #DAAAE3;
+  background: #fff;
   margin: 0;
   padding: 0;
-  border-top: purple solid 15px;
 }
 
-/* had to make this div to align the h1 header and the logo next to it */
-#headlogo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo{
+  display: block;
+  margin: 0 auto;
 }
 
 header{
@@ -25,19 +22,18 @@ header{
   margin: 0;
 }
 
-.capybucket{
-  display: inline;
-  vertical-align: middle;
-  margin-right: 20px;
+h1{
+  text-align: center;
 }
 
+/* Keeping this because I like the colors and shadow
 h1{
   text-align: center;
   font-family: 'Chela One';
   color: #E7E1E8;
   text-shadow: 4px 5px #B26BBC;
 }
-
+*/
 
 /*I couldn't center the nav text with nav ul, so I did it in nav*/
 nav{
@@ -46,11 +42,10 @@ nav{
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 800px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   border: #cfaae3 double 3px;
-  border-radius: 10px;
 }
 
 nav ul{
@@ -89,7 +84,7 @@ a:link{
 }
 
 a:visited{
-  color: darkolivegreen;
+  color: #5390c1;
 }
 
 a:hover{
@@ -109,9 +104,6 @@ h2{
   text-align: center;
 }
 
-p{
-  font-size: 1.15em;
-}
 
 li{
   font-size: 1.15em;
@@ -120,7 +112,6 @@ li{
 
 /*the main image on the index page and the bio to the right of it*/
 .capy{
-  float: left;
   max-width: 70%;
   height: auto;
   display: block;
@@ -129,31 +120,11 @@ li{
   padding-bottom: 50px;
 }
 
-.bio{
-  float: right;
-  max-width: 400px;
-  width: 50%;
-  margin: auto;
-  margin-right: 50px;
-  padding-bottom: 50px;
-}
 
-table{
-  border-collapse: collapse;
-  background-color: white;
-  margin: auto;
-}
-
-th{
-  background-color: darkorange;
-  color: ghostwhite;
-}
-
-td,th{
-  border: 3px solid indigo;
-  padding: 5px;
-  text-align: left;
-}
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+} 
 
 label{
   float: left;
@@ -167,12 +138,18 @@ input, textarea{
   margin-bottom: 1em;
   display: block;
   margin-top: 20px;
+  margin-left: 20px;
 }
 
 input[type=submit]{
+  font-family: Assistant;
+  font-size: 1.0em;
   display: block;
-  background-color: lightgray;
+  color: black;
+  background-color: white;
   margin-left: 20px;
+  height: 50px;
+  width: 80px;
 }
 
 #formdiv{
@@ -184,14 +161,6 @@ input[type=submit]{
   box-shadow: 10px 10px 5px 0px rgba(147,92,166,0.75);
 }
 
-footer{
-  text-align: center;
-  border-top: 1.5px outset palevioletred;
-  padding: 10px;
-  clear: both;
-  background-color: #DAAAE3;
-  color: white;
-}
 
 .resume h2, h4{
   text-align: center;
@@ -250,10 +219,22 @@ canvas{
   background-image: url(images/silverbg.jpg);
 }
 
+footer{
+  text-align: center;
+  border-top: 1.5px outset palevioletred;
+  padding: 10px;
+  clear: both;
+  background-color: #DAAAE3;
+  color: #000;
+}
+
+.fa{
+  font-size: 3.0em;
+}
 
 /*CSS without a media query--applies to all sizes unless overridden*/
 h1{
-  font-size: 4em;
+  font-size: 3.0em;
  }
 .mobile{
   display: none;
@@ -262,7 +243,7 @@ h1{
 /* CSS Adjustments for Tablets */
 @media only screen and (max-width: 1024px) {
     h1{
-        font-size: 2.75em;
+        font-size: 2.0em;
     }
     .desktop{
       display: none;
@@ -277,6 +258,7 @@ h1{
       padding:6px;
       font-size: 1.2em;
     }
+   
 }
 /* CSS Adjustments for Smartphones */
 @media only screen and (max-width: 768px) {
@@ -288,12 +270,16 @@ h1{
     }
     .mobile{
       display: block;
+      touch-action: manipulation;
     }
-  nav{
+    nav{
       max-width:500px;
     }
     nav a{
       padding: 3px;
       font-size: 1.0em;
     }
+
+
 }
+
