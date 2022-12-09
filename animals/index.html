@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Animal Photography</title>
+		<meta charset="utf-8">
+		<!--I am not sure if I need both meta names?-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="See the best photos of animals taken by upcoming photographer Pixa Bay.">
+		<!--font awesome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Bootstrap Stylesheet-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<header>
+			<h1 class="desktop">ANIMAL PHOTOGRAPHY</h1>
+			<h1 class="mobile">ANIMAL PHOTOGRAPHY</h1>
+
+			 
+		</header>
+		<nav>
+			<a href="https://en.wikipedia.org/wiki/Animal">About</a>
+			<a href="index.html">Home</a>
+			<a href="../capybara-etc/index.html">Portfolio</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+		
+		<main>
+			<img class="header-image" src="images/capybara.png" alt="three capybaras" height="400" width="1200">
+			<br>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<blockquote>
+							<p>The website features photographs of animals from Pixabay.com. The key to animal photography is patience. It can take a long time to get the right lighting and the best view of the animal. When photographing animals, you do not have a lot of control...you need to wait for them.</p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="gallery">
+   				<div class="preview">
+       			 	<img id="preview" src="images/nudibranch.jpg" style="display:block;margin:0 auto;" alt="a black nudibranch or sea slug with red spots"  height="600" width="800"/>
+    			</div>
+
+    			<div class="gallery-thumbnails" style="margin:0 auto;text-align:center">
+        			<img onclick="document.getElementById('preview').src=document.getElementById('img1').src" id="img1" src="images/nudibranch.jpg" alt="a black nudibranch or sea slug with red spots" />
+        			<img onclick="document.getElementById('preview').src= document.getElementById('img2').src;" id="img2" src="images/fallow-deer.jpg" alt="a fallow deer in a meadow"  />
+        			<img onclick="document.getElementById('preview').src = document.getElementById('img3').src;" id="img3" src="images/fox.jpg" alt="a red fox" />
+       				<img onclick="document.getElementById('preview').src = document.getElementById('img4').src;" id="img4" src="images/hedgehog.jpg" alt="closeup of a hedgehog" />
+        			<img onclick="document.getElementById('preview').src = document.getElementById('img5').src;" id="img5" src="images/sheep.jpg" alt="a bighorn sheep"  />
+        			<img onclick="document.getElementById('preview').src = document.getElementById('img6').src;" id="img6" src="images/frog.jpg" alt="a green tree frog" />
+        			<img onclick="document.getElementById('preview').src = document.getElementById('img7').src;" id="img7" src="images/otter.jpg" alt="a cute otter" />
+        			<img onclick="document.getElementById('preview').src = document.getElementById('img8').src;" id="img8" src="images/sea-turtle.jpg" alt="aerial shot of a sea turtle" />
+    			</div>
+			</div>
+
+		</main>
+
+		<footer>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-6">
+						<h4>Web Design Exercise</h4>
+						<p style="font-size: 1.0em;">Animal Photography is a website exercise on image galleries available on WebDevStudents.com. The images are royalty-free photos from pixabay.com, and I copied this text from my professor's example. JavaScript was used to make the photo gallery, and Bootstrap columns for responsive layout.</p>
+					</div>
+					<div class="col-sm-6">
+						<h4>Connect with Animal Photography!</h4>
+						<a href="http://saintpaul.edu">
+							<i class="fa fa-university" aria-hidden="true"></i>&nbsp;Saint Paul College
+						</a>
+						<br>
+						<a href="mailto:junglejim4322@yahoo.com">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp; (pls don't) email me!
+						</a> 
+						<br>
+						<a href="www.vine.com">
+							<i class="fa fa-vine" aria-hidden="true"></i>&nbsp;bring vine back to life!?
+						</a> 
+						<br>
+						<a href="sms:6664206969" class="mobile">Text for spam</a>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<small>	&copy; 2022 Robin Jungwirth. All rights (and lefts) reserved. Thenk yew.</small>
+		</footer>
+
+		<!--jQuery, Popper, and Bootstrap Javascript files-->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	</body>
+</html>

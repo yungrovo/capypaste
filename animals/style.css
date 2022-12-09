@@ -1,0 +1,163 @@
+/*look at all deez lynx*/
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+
+h1{
+  font-family: 'El Messiri', sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*change the header imageeeeeeeeeeeeeeeeeeeeeeeeeee
+max img width 1920px*/
+
+.header-image{
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: auto;
+}
+
+/*I couldn't center the nav text with nav ul, so I did it in nav*/
+nav{
+  background-color: #a3d0d3;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+nav ul{
+  list-style-type:none;
+  margin: 10px;
+}
+
+nav li{
+  display:inline;
+}
+
+nav a{
+  text-decoration:none;
+  padding: 20px;
+  font-size: 1.3em;
+}
+
+nav a:link{
+  color:black;
+}
+nav a:visited{
+  color:black;
+}
+nav a:hover{
+  color:tomato;
+}
+nav a:active{
+  color:violet;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  color: white;
+  margin: 0;
+  background-color: #3F474B;
+}
+
+main{
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+a:link{
+  color: indigo;
+}
+
+a:visited{
+  color: darkgreen;
+}
+
+a:hover{
+  color: crimson;
+}
+
+a:active{
+  color: darkorange;
+}
+
+p{
+  font-size: 1.4em;
+}
+
+.gallery .preview{
+    width:100%
+    height:auto;
+}
+
+.gallery .gallery-thumbnails img {
+    width:100px;
+    height:75px;
+    margin: 3px 10px 10px 0;
+}
+
+.gallery .gallery-thumbnails img:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.gallery .preview img#preview {
+    padding: 1px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+
+footer{
+  text-align: center;
+  background-color: #a3d0d3;
+  padding: 10px 40px 10px 200px;
+  color: black;
+}
+
+.col-sm-6{
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: left;
+}
+
+/*CSS without a media query--applies to all sizes unless overridden*/
+h1{
+        font-size: 2.5em;
+ }
+.mobile{
+  display: none;
+}
+
+/* CSS Adjustments for Tablets */
+@media only screen and (max-width: 1024px) {
+    h1{
+        font-size: 1.8em;
+    }
+    .desktop{
+      display: none;
+    }
+    .mobile{
+      display: block;
+    }
+   
+}
+/* CSS Adjustments for Smartphones */
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 1.5em;
+    }
+    .desktop{
+      display: none;
+    }
+    .mobile{
+      display: block;
+    }
+}
