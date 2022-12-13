@@ -122,6 +122,10 @@ footer{
   color: black;
 }
 
+#footer-text{
+  font-size: 1.0em;
+}
+
 .col-sm-6{
   flex: 0 0 50%;
   max-width: 50%;
