@@ -17,8 +17,9 @@ body {
 }
 
 header{
-  background-color: #DAAAE3;
-  padding-top: 20px;
+  background-color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin: 0;
 }
 
@@ -35,21 +36,18 @@ h1{
 }
 */
 
-/*I couldn't center the nav text with nav ul, so I did it in nav*/
+
 nav{
-  background-color: #E5D5FF;
-  text-align: center;
+  background-color: #712f7c;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
   max-width: 100%;
-  display: flex;
-  justify-content: center;
-  border: #cfaae3 double 3px;
 }
 
 nav ul{
   list-style-type:none;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 nav li{
@@ -60,27 +58,25 @@ nav a{
   text-decoration:none;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   font-size: 1.3em;
 }
 
 nav a:link{
-  color:#6116DE;
+  color:#e7e7e7;
 }
 nav a:visited{
-  color:#6116DE;
+  color:#e7e7e7;
 }
 nav a:hover{
   color:tomato;
 }
 nav a:active{
-  color:violet;
+  color:darkorange;
 }
 
 
 a:link{
-  color: indigo;
+  color: #e7e7e7;
 }
 
 a:visited{
@@ -88,7 +84,7 @@ a:visited{
 }
 
 a:hover{
-  color: crimson;
+  color: tomato;
 }
 
 a:active{
@@ -100,71 +96,25 @@ main{
   margin: 20px auto;
 }
 
-h2{
-  text-align: center;
-}
-
-
-li{
-  font-size: 1.15em;
-}
-
-
-/*the main image on the index page and the bio to the right of it*/
-.capy{
-  max-width: 70%;
-  height: auto;
-  display: block;
-  margin-left: 75px;
-  margin-right: auto;
-  padding-bottom: 50px;
-}
-
 
 .img-fluid{
   max-width: 100%;
   height: auto;
 } 
 
-label{
-  float: left;
-  width: 8em;
-  padding-right: 1em;
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
-input, textarea{
-  margin-bottom: 1em;
-  display: block;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-input[type=submit]{
-  font-family: Assistant;
-  font-size: 1.0em;
-  display: block;
-  color: black;
-  background-color: white;
-  margin-left: 20px;
-  height: 50px;
-  width: 80px;
-}
-
-#formdiv{
-  margin: 0 auto;
+.index-img{
+  border-radius: 20px;
+  max-width: 70%;
   height: auto;
-  width: 50%;
-  border: 1px solid gray;
-  background-color: ghostwhite;
-  box-shadow: 10px 10px 5px 0px rgba(147,92,166,0.75);
+  margin-left: 30px;
 }
 
 
+/*how to specify a page?
 .resume h2, h4{
   text-align: center;
 }
+*/
 
 .vidcon-holder{
   width: 80%;
@@ -189,6 +139,11 @@ input[type=submit]{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.flappy{
+  text-align: center;
+  
 }
 
 /*a change to the game*/
@@ -224,8 +179,8 @@ footer{
   border-top: 1.5px outset palevioletred;
   padding: 10px;
   clear: both;
-  background-color: #DAAAE3;
-  color: #000;
+  background-color: #712f7c;
+  color: #e7e7e7;
 }
 
 .fa{
@@ -280,6 +235,9 @@ h1{
       font-size: 1.0em;
     }
 
+    .flappy {
+      text-align: left;
+    }
 
 }
 
