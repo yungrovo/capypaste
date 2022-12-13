@@ -2,18 +2,17 @@
 <html lang="en">
 
 	<head>
-		<title>Capy Paste Websites: JavaScript</title>
+		<title>Capy_Paste Websites: JavaScript</title>
 		<meta charset="utf-8">
-		<!--I am not sure if I need both meta names?-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Capy_Paste Websites by Robin Jungwirth. See my portfolio and available services.">
+		<meta name="description" content="Capy Paste Websites by Robin Jungwirth. Play Flappy Capy here!">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="style.css">
 			<style>
 			      canvas {
 			      border:1px solid #d3d3d3;
-			      background-color: #f1f1f1;
+			      background-color: #ffe649;
 			      }	  
    			</style>
 	</head>
@@ -27,17 +26,27 @@
 			</div>
 		</header>
 		<nav>
-			<a href="index.html">Home</a>
-			<a href="portfolio.html">Portfolio</a>
-			<a href="multimedia.html">Multimedia</a>
-			<a href="javascript.html">JavaScript</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="multimedia.html">Multimedia</a></li>
+				<li><a href="javascript.html">JavaScript</a></li>
+			</ul>
 		</nav>
-		<br>
 		<main>
-			<h1>Flappy Capy</h1>
-			<p>I'm a purple capybara and I found a weird flower. Let's go eat yummy grass!<br>Click the button to make me float in the sky.</p>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">	
+						<h1>Flappy Capy</h1>
+						<h5>This game is based on the W3 Schools tutorial for a certain flapping bird game. I gave it some style with CSS and changed the game piece.</h5> 
+						<br>
+						<h5 class="flappy">I'm a purple capybara and I found a weird flower. <br>Let's go eat yummy grass!<br>Click the button to make me float in the sky.<br>How many steps until we reach our lunch?</h5>
+					</div>
+				</div>
+			</div>
+			
 
-			<div id="game" ></div>
+			<div id="game"></div>
    			<!--There are two versions of controls...one for desktop that uses a mouse and one for mobile devices The desktop has the desktop class and the mobile has the mobile class-->
 				<div class="game-controls desktop">
    				 <button class="myButton" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">go Go GO!</button>
@@ -52,7 +61,7 @@
 			<script>
 				/* Add variables for the height and width */
 				var canvasWidth = 610;
-				var canvasHeight = 300;
+				var canvasHeight = 280;
 				/*Test to see if I have a screen less than 768 pixels and if so, change the canvas size */
 				if (window.innerWidth < 768){
 				    canvasWidth = 300;
@@ -66,10 +75,10 @@
 			      
 			/*some changes to the game*/
 			      function startGame() {
-			          myGamePiece = new component(80, 80, "images/flappycapy.png", 10, 120, "image");
-			          myGamePiece.gravity = 0.035;
-			          myBackground= new component(930, 360, "silverbg.jpg",0, 0, "image");
-			          myScore = new component("30px", "Courier New", "black", 40, 40, "text");
+			          myGamePiece = new component(80, 80, "images/flappy-capy.png", 10, 120, "image");
+			          myGamePiece.gravity = 0.05;
+			          myBackground= new component(610, 300, "images/silver-bg.jpg", 0, 0, "image");
+			          myScore = new component("25px", "Georgia", "black", 40, 40, "text");
 			          myGameArea.start();
 			      }
 			      
@@ -152,11 +161,16 @@
 			              if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
 			                  crash = false;
 			              }
-			              /*else {
+			               /*
 			  I'm trying to make a popup message when you hit the obstacle, but the message won't close!!
+			  			
+			              else {	
 			              	clearInterval(game);
 			              	window.alert("*munch munch* This grass is tasty!");
-			              	myGamePiece.reload(); 				 }*/
+			              	myGamePiece.reload(); 
+			              	window.close();
+			              } */
+			             
 			              return crash;
 			          }
 			      }
@@ -185,7 +199,7 @@
 			              myObstacles[i].x += -1;
 			              myObstacles[i].update();
 			          }
-			          myScore.text="SCORE: " + myGameArea.frameNo;
+			          myScore.text="Steps: " + myGameArea.frameNo;
 			          myScore.update();
 			          myGamePiece.newPos();
 			          myGamePiece.update();
@@ -205,39 +219,24 @@
 		<footer>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-12">
-						<h2>Message a Capybara!!</h2>
+					<div class="col-sm-6">
+						<h3>Capy_Paste Portfolio</h3>
+						<p> This website was made with skills I learned in Web Fundamentals at Saint Paul College.</p>
+						<p>All images besides my own are free to use from <a href="https://pixabay.com"> Pixabay.</a></p>
 					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-3">
-						<a href="http://saintpaul.edu">
-							<i class="fa fa-university" aria-hidden="true"></i>
-							<p>Saint Paul College</p>
+					<div class="col-sm-6">
+						<h3>Connect with me!</h3>
+						<a href="mailto:robigomi@mail.com">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							Email me!&emsp;&emsp;&emsp;
 						</a>
 						<br>
-					</div>
-					<div class="col-sm-3">
-						<a href="junglejim4322@yahoo.com">
-							<i class="fa fa-envelope-o" aria-hidden="true"></i>
-							<p>(pls don't) email me!</p>
-						</a>
-					</div>
-					<div class="col-sm-3">
-						<a href="http://yungrovo.github.io">
+						<a href="https://github.com/yungrovo" target="_blank">
 							<i class="fa fa-github" aria-hidden="true"></i>
-							<p>Github</p>
+							Find me on Github
 						</a>
-					</div>
-					<div class="col-sm-3">
-						<a href="http://linkedin.com">
-							<i class="fa fa-linkedin-square" aria-hidden="true"></i>
-							<p>LinkedIn</p>
-						</a>
-					</div>
-				</div>
+					</div>		
+				</div>			
 			</div>	
 			<div class="container-fluid">
 				<div class="row">
